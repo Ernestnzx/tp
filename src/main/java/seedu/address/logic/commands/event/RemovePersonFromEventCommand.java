@@ -5,6 +5,7 @@ import static seedu.address.logic.parser.CliSyntax.EVENT_COMMAND_WORD;
 import static seedu.address.logic.parser.event.EventCliSyntax.PREFIX_LINKED_PERSON_INDEX;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 import seedu.address.commons.core.index.Index;
@@ -60,7 +61,7 @@ public class RemovePersonFromEventCommand extends EditCommand<Event> {
         List<Person> newPersons = new ArrayList<>(eventToEdit.getPersons());
         personIndices.stream()
                 .map(Index::getZeroBased)
-                // .sorted(Comparator.reverseOrder())
+                .sorted(Comparator.reverseOrder())
                 .forEach(index -> newPersons.remove((int) index));
         return new Event(
             eventToEdit.getName(),

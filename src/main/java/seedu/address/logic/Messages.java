@@ -93,7 +93,7 @@ public class Messages {
                 + "; Start Time: " + event.getStartTime()
                 + "; End Time: " + event.getEndTime()
                 + "; Location: " + event.getLocation()
-                + "; personListFormatted" + personListFormatted;
+                + "; Persons: " + personListFormatted;
     }
 
     /**
