@@ -26,7 +26,7 @@ public class CommandBox extends UiPart<Region> {
 
     private Consumer<ListPanelViewType> viewSwitchHandler;
     private final List<String> previousCommands;
-    private int currentCommandIndex
+    private int currentCommandIndex;
 
     @FXML
     private TextField commandTextField;
